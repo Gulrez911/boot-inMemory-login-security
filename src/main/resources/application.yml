@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    password: 
+    url: jdbc:mysql://localhost:3306/sales?createDatabaseIfNotExist=true&useSSL=false
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect  
+  
+  security:
+    oauth2:
+      client:
+        registration:
+         google:
+          clientId: 520246547843-m73spml2vj739s0h1s4s1ug0btojuqf3.apps.googleusercontent.com
+          clientSecret: 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
+          scope:
+           - email
+           - profile
+           
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp        
